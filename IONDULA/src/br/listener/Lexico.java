@@ -57,7 +57,7 @@ public class Lexico implements ActionListener {
     }
 
     private void Inicio() {
-        //Zera terminal atual, para começar do zero
+        //Zera terminal atual
         terminalAtual = "";
         //se for espaço, pula ele
         if (charDoTexto[posicaoAtual] == '¢') {
@@ -168,7 +168,7 @@ public class Lexico implements ActionListener {
             terminalAtual += charDoTexto[posicaoAtual];
             B();
         }//Ao encontrar algo diferente de número ao letra adiciona ao console que uma variável foi identificada 
-        else if (terminalAtual != "" && !terminado) {
+        else if (terminalAtual.length() <= 20) {
             //Correção de bug
             if (terminalAtual != "" && !terminado) {
                 cp.setConsole(16, terminalAtual, linha, "Nome de Variavel");
