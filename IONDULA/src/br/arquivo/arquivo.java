@@ -68,8 +68,7 @@ public class arquivo implements ActionListener {
 
     public void Salvar() {
 
-        String txtSemEspaco = cp.getEditor().getText().replaceAll("\n", "¬");
-        txtSemEspaco = txtSemEspaco.replaceAll(" ", "¢");
+        String txtSemEspaco = cp.getEditor().getText();
         JFileChooser chooser = new JFileChooser();
         chooser.setCurrentDirectory(new File("/home/me/Documents"));
         int retrival = chooser.showSaveDialog(null);

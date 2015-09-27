@@ -43,6 +43,7 @@ public class CompiladorGUI extends javax.swing.JFrame {
     }
 
     public void setEditor(String linha) {
+        linha = linha + "\n";
         this.txtAreaEditor.append(linha);
     }
     
