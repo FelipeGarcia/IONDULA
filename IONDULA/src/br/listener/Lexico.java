@@ -28,7 +28,7 @@ public class Lexico implements ActionListener {
     int testeReal;
     boolean terminado;
     String txtSemEspaco;
-
+    
     public Lexico(CompiladorGUI cp) {
         this.cp = cp;
     }
