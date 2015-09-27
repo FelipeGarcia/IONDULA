@@ -142,7 +142,7 @@ public class CompiladorGUI extends javax.swing.JFrame {
 
         jMenu4.setText("Design");
 
-        jMenuItem3.setText("Preto");
+        jMenuItem3.setText("Dark");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
