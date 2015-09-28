@@ -394,18 +394,27 @@ public class Lexico implements ActionListener {
             //Passa para próxima posição
             posicaoAtual++;
             M();
+        } else{
+            cp.setConsole(0, "Um Erro Foi encontrado", linha, "Caracter invalido encontrado");
+            terminado = true;
+            posicaoAtual = txtSemEspaco.length() - 1;
         }
     }
 
     private void M() {
         //Enquanto uma quebra de linha não é encontrada, passamos pelo comentário
-        do {
-            //Passa para próxima posição
-            posicaoAtual++;
-        } while (charDoTexto[posicaoAtual] != '¬');
-        //Passa para próxima linha
-        linha++;
+        if(charDoTexto[posicaoAtual] == '¬' || charDoTexto[posicaoAtual] == '$'){
+           linha++;
         Inicio();
+        }
+        else{
+            System.out.println(charDoTexto[posicaoAtual]);
+            posicaoAtual++;
+           
+           M();
+        }
+        //Passa para próxima linha
+        
     }
 
     private void N() {
