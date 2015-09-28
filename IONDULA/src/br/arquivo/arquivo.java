@@ -13,10 +13,7 @@ import java.util.Collection;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-/**
- *
- * @author felipes
- */
+
 public class arquivo implements ActionListener {
 
     CompiladorGUI cp;
