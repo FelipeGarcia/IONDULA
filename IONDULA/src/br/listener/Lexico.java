@@ -1,18 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.listener;
 
 import br.janela.CompiladorGUI;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- *
- * @author felipes
- */
+
 public class Lexico implements ActionListener {
 
     CompiladorGUI cp;
@@ -138,7 +130,7 @@ public class Lexico implements ActionListener {
             int i = 0;
             //Verifica se o texto armazenado se encontra nas palavras reservadas, adicionando ele ao console.
             for (String palavraCorrente : terminais) {
-                if (terminalAtual.equals(palavraCorrente)) {
+                if (terminalAtual.toLowerCase().equals(palavraCorrente)) {
                     cp.setConsole(i, terminalAtual, linha, "Palavra reservada");
                     Inicio();
                 }
@@ -194,7 +186,7 @@ public class Lexico implements ActionListener {
         int i = 0;
         //Verifica se o texto armazenado se encontra nas palavras reservadas, adicionando ele ao console.
         for (String palavraCorrente : terminais) {
-            if (terminalAtual.equals(palavraCorrente)) {
+            if (terminalAtual.toLowerCase().equals(palavraCorrente)) {
                 cp.setConsole(i, terminalAtual, linha, "Operador Lógico");
                 Inicio();
             }
@@ -216,7 +208,7 @@ public class Lexico implements ActionListener {
         int i = 0;
         //Verifica se o texto armazenado se encontra nas palavras reservadas, adicionando ele ao console.
         for (String palavraCorrente : terminais) {
-            if (terminalAtual.equals(palavraCorrente)) {
+            if (terminalAtual.toLowerCase().equals(palavraCorrente)) {
                 cp.setConsole(i, terminalAtual, linha, "Operador Lógico");
                 Inicio();
             }
@@ -231,7 +223,7 @@ public class Lexico implements ActionListener {
         int i = 0;
         //Verifica se o texto armazenado se encontra nas palavras reservadas, adicionando ele ao console.
         for (String palavraCorrente : terminais) {
-            if (terminalAtual.equals(palavraCorrente)) {
+            if (terminalAtual.toLowerCase().equals(palavraCorrente)) {
                 cp.setConsole(i, terminalAtual, linha, "Operador Lógico");
                 Inicio();
             }
@@ -404,11 +396,10 @@ public class Lexico implements ActionListener {
     private void M() {
         //Enquanto uma quebra de linha não é encontrada, passamos pelo comentário
         if(charDoTexto[posicaoAtual] == '¬' || charDoTexto[posicaoAtual] == '$'){
-           linha++;
+           
         Inicio();
         }
         else{
-            System.out.println(charDoTexto[posicaoAtual]);
             posicaoAtual++;
            
            M();
@@ -428,7 +419,7 @@ public class Lexico implements ActionListener {
         int i = 0;
         //Verifica se o texto armazenado se encontra nas palavras reservadas, adicionando ele ao console.
         for (String palavraCorrente : terminais) {
-            if (terminalAtual.equals(palavraCorrente)) {
+            if (terminalAtual.toLowerCase().equals(palavraCorrente)) {
                 cp.setConsole(i, terminalAtual, linha, "Simbolo");
                 Inicio();
             }
@@ -442,7 +433,7 @@ public class Lexico implements ActionListener {
         int i = 0;
         //Verifica se o texto armazenado se encontra nas palavras reservadas, adicionando ele ao console.
         for (String palavraCorrente : terminais) {
-            if (terminalAtual.equals(palavraCorrente)) {
+            if (terminalAtual.toLowerCase().equals(palavraCorrente)) {
                 cp.setConsole(i, terminalAtual, linha, "Operador de Atribuição");
                 Inicio();
             }
@@ -456,7 +447,7 @@ public class Lexico implements ActionListener {
         int i = 0;
         //Verifica se o texto armazenado se encontra nas palavras reservadas, adicionando ele ao console.
         for (String palavraCorrente : terminais) {
-            if (terminalAtual.equals(palavraCorrente)) {
+            if (terminalAtual.toLowerCase().equals(palavraCorrente)) {
                 cp.setConsole(i, terminalAtual, linha, "Simbolo");
                 Inicio();
             }
@@ -470,7 +461,7 @@ public class Lexico implements ActionListener {
         int i = 0;
         //Verifica se o texto armazenado se encontra nas palavras reservadas, adicionando ele ao console.
         for (String palavraCorrente : terminais) {
-            if (terminalAtual.equals(palavraCorrente)) {
+            if (terminalAtual.toLowerCase().equals(palavraCorrente)) {
                 cp.setConsole(i, terminalAtual, linha, "Simbolo Aritimético");
                 Inicio();
             }

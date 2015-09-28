@@ -3,7 +3,10 @@ package br.janela;
 import br.arquivo.arquivo;
 import br.listener.Lexico;
 import java.awt.Color;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.io.File;
+import java.net.URL;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
@@ -29,6 +32,10 @@ public class CompiladorGUI extends javax.swing.JFrame {
         Abrir.setActionCommand("Abrir");
         Salvar.addActionListener(arq);
         Salvar.setActionCommand("Salvar");
+        
+        URL url = this.getClass().getResource("imagem.png"); 
+        Image imagemTitulo = Toolkit.getDefaultToolkit().getImage(url);  
+        this.setIconImage(imagemTitulo);  
     }
 
     public void setConsole(int c, String t, int l, String i){
