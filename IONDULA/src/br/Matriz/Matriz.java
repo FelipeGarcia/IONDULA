@@ -13,6 +13,8 @@ public class Matriz {
         matriz[3][23] = 3;
         matriz[4][2] = 5;
         matriz[4][22] = 4;
+        matriz[5][2] = 6;
+        matriz[6][9] = 15;
         
     }
     
