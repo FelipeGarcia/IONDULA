@@ -75,6 +75,52 @@ public class Matriz {
         matriz[18][36] = 30;
         matriz[18][38] = 30;
         matriz[18][41] = 29;
+        matriz[19][11] = 38;
+        matriz[19][12] = 37;
+        matriz[19][13] = 63;
+        matriz[19][16] = 36;
+        matriz[19][39] = 35;
+        matriz[20][3] = 34;
+        matriz[20][4] = 34;
+        matriz[20][21] = 34;
+        matriz[20][24] = 34;
+        matriz[20][25] = 34;
+        matriz[20][26] = 34;
+        matriz[20][27] = 34;
+        matriz[20][28] = 34;
+        matriz[20][29] = 34;
+        matriz[20][30] = 34;
+        matriz[20][31] = 34;
+        matriz[20][34] = 33;
+        matriz[20][36] = 34;
+        matriz[20][37] = 32;
+        matriz[20][38] = 34;
+        matriz[20][41] = 34;
+        matriz[21][11] = 40;
+        matriz[21][12] = 40;
+        matriz[21][13] = 40;
+        matriz[21][16] = 40;
+        matriz[21][39] = 40;
+        matriz[22][20] = 47;
+        matriz[22][31] = 48;
+        matriz[23][24] = 46;
+        matriz[23][25] = 44;
+        matriz[23][26] = 41;
+        matriz[23][27] = 42;
+        matriz[23][28] = 45;
+        matriz[23][29] = 43;
+        matriz[24][31] = 51;
+        matriz[24][32] = 52;
+        matriz[24][39] = 51;
+        matriz[25][31] = 54;
+        matriz[25][39] = 53;
+        matriz[26][11] = 57;
+        matriz[26][12] = 56;
+        matriz[26][13] = 62;
+        matriz[26][16] = 55;
+        matriz[27][36] = 58;
+        matriz[27][38] = 59;
+        
     }
     
 }
