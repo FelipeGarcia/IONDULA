@@ -14,7 +14,7 @@ public class Lexico implements ActionListener {
     static String[] terminais = {null, "while", "var", "to", "then", "string", "real", "read",
         "program", "procedure", "print", "nreal", "nint", "literal", "integer", "if", "ident",
         " ", "for", "end", "else", "do", "const", "begin", ">=", ">", "=", "<>", "<=", "<", "+",
-        ";", ":=", ":", "/", ".", ",", "*", ")", "(", "$", "-", "%%", "@|", "|@"};
+        ";", ":=", ":", "/", ".", ",", "*", ")", "(", "$", "-"};
     char[] charDoTexto;
     static String terminalAtual;
     int testeReal;
