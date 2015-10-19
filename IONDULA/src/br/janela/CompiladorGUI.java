@@ -1,7 +1,10 @@
 package br.janela;
 
+import br.Matriz.Matriz;
+import br.Matriz.Regras;
 import br.arquivo.arquivo;
 import br.listener.Lexico;
+import br.listener.Sintatico;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -17,13 +20,12 @@ public class CompiladorGUI extends javax.swing.JFrame {
 
     Lexico lal;
 
-    DefaultTableModel model;
-    
+    DefaultTableModel model, model2;
     public CompiladorGUI() {
         initComponents();
        
         model = (DefaultTableModel) console.getModel();
-        
+        model2 = (DefaultTableModel) Sintatico.getModel();
         lal = new Lexico(this);
         arquivo arq = new arquivo(this);
         Analisar.addActionListener(lal);
@@ -41,6 +43,11 @@ public class CompiladorGUI extends javax.swing.JFrame {
     public void setConsole(int c, String t, int l, String i){
        model.addRow(new Object[]{String.valueOf(c),t,String.valueOf(l),i});
        console.setModel(model);
+    }
+    
+    public void setSintatico(int x, int a, int regra){
+       model2.addRow(new Object[]{String.valueOf(x),String.valueOf(a),String.valueOf(regra)});
+       Sintatico.setModel(model2);
     }
     
     public void cleanConsole(){
@@ -66,8 +73,11 @@ public class CompiladorGUI extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         txtAreaEditor = new javax.swing.JTextArea();
         Analisar = new javax.swing.JButton();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
         jScrollPane3 = new javax.swing.JScrollPane();
         console = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Sintatico = new javax.swing.JTable();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         Abrir = new javax.swing.JMenuItem();
@@ -103,6 +113,20 @@ public class CompiladorGUI extends javax.swing.JFrame {
             }
         ));
         jScrollPane3.setViewportView(console);
+
+        jTabbedPane1.addTab("Analise Lexica", jScrollPane3);
+
+        Sintatico.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "X", "A", "Regra Empilhada"
+            }
+        ));
+        jScrollPane2.setViewportView(Sintatico);
+
+        jTabbedPane1.addTab("Analise Sintatica", jScrollPane2);
 
         jMenu1.setText("Arquivo");
 
@@ -177,7 +201,7 @@ public class CompiladorGUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 927, Short.MAX_VALUE)
                 .addComponent(Analisar, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jScrollPane3)
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,8 +211,7 @@ public class CompiladorGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Analisar)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE))
         );
 
         pack();
@@ -261,6 +284,7 @@ public class CompiladorGUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem Abrir;
     private javax.swing.JButton Analisar;
     private javax.swing.JMenuItem Salvar;
+    private javax.swing.JTable Sintatico;
     private javax.swing.JTable console;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
@@ -272,7 +296,9 @@ public class CompiladorGUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea txtAreaEditor;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,7 +4,7 @@ package br.Matriz;
 
 public class Matriz {
    
-    static int[][] matriz = new int[27][41];
+    static int[][] matriz = new int[28][42];
     
     public void popula(){
         matriz[0][8] = 1;
@@ -123,4 +123,10 @@ public class Matriz {
         
     }
     
+    public int buscar(int x, int val){
+       x = x-42;
+               
+        return matriz[x][val];
+        
+    }
 }
